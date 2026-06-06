@@ -1,12 +1,112 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+-- [[ Xen PRO - SINGLE GAME AUTH SYSTEM ]] --
+-- Simple, Direct, & Auto-Save Enabled
 
-]]--
+local CoreGui = game:GetService("CoreGui")
+local TweenService = game:GetService("TweenService")
 
-local v0=game:GetService("CoreGui");local v1=game:GetService("TweenService");local v2="CUSTOM_SKY";local v3="https://discord.gg/dH6CtkECt";local v4="https://direct-link.net/6045319/0Ca4wAcRwnEo";local v5="https://pastefy.app/xea1xu5S/raw";local v6="Xen-key.txt";if v0:FindFirstChild("SATURN_AUTH") then v0.Xen_AUTH:Destroy();end local v7=Instance.new("ScreenGui");v7.Name="Xen_AUTH";v7.Parent=v0;v7.IgnoreGuiInset=true;v7.DisplayOrder=999999;local v12=Instance.new("Frame");v12.Size=UDim2.new(1,0,1,0);v12.BackgroundColor3=Color3.new(0,0,0);v12.BackgroundTransparency=0.5;v12.BorderSizePixel=0;v12.Parent=v7;local v18=Instance.new("Frame");v18.Size=UDim2.new(1,0,1,0);v18.BackgroundTransparency=1;v18.Parent=v12;local v22=Instance.new("Frame");v22.Parent=v7;v22.BackgroundColor3=Color3.fromHex("#0b0e14");v22.AnchorPoint=Vector2.new(0.5,0.5);v22.Position=UDim2.new(0.5,0,0.5,0);v22.Size=UDim2.new(0,360,0,380);Instance.new("UICorner",v22).CornerRadius=UDim.new(0,15);local v29=Instance.new("UIStroke",v22);v29.Color=Color3.fromHex("#004242");v29.Thickness=2;local v32=Instance.new("TextLabel");v32.Parent=v22;v32.Position=UDim2.new(0,0,0,30);v32.Size=UDim2.new(1,0,0,30);v32.Font=Enum.Font.GothamBold;v32.Text="Access Key Required";v32.TextColor3=Color3.new(1,1,1);v32.TextSize=24;v32.BackgroundTransparency=1;local v42=Instance.new("TextLabel");v42.Parent=v22;v42.Position=UDim2.new(0,0,0,65);v42.Size=UDim2.new(1,0,0,20);v42.Font=Enum.Font.Gotham;v42.Text="Enter your access key to continue";v42.TextColor3=Color3.fromRGB(160,160,160);v42.TextSize=15;v42.BackgroundTransparency=1;local v52=Instance.new("TextBox");v52.Parent=v22;v52.Position=UDim2.new(0.1,0,0,120);v52.Size=UDim2.new(0.8,0,0,55);v52.BackgroundColor3=Color3.fromRGB(18,22,30);v52.PlaceholderText="Enter key here";v52.Text="";v52.TextColor3=Color3.new(1,1,1);v52.TextSize=17;Instance.new("UICorner",v52).CornerRadius=UDim.new(0,12);local v62=Instance.new("TextButton");v62.Parent=v22;v62.Position=UDim2.new(0.1,0,0,200);v62.Size=UDim2.new(0.8,0,0,55);v62.BackgroundColor3=Color3.fromRGB(40,45,55);v62.Font=Enum.Font.GothamBold;v62.Text="Verify Access Key";v62.TextColor3=Color3.new(1,1,1);v62.TextSize=18;Instance.new("UICorner",v62).CornerRadius=UDim.new(0,12);local v72=Instance.new("TextButton");v72.Parent=v22;v72.Position=UDim2.new(0.1,0,0,275);v72.Size=UDim2.new(0.38,0,0,50);v72.BackgroundColor3=Color3.fromRGB(35,130,90);v72.Font=Enum.Font.GothamBold;v72.Text="Get Key";v72.TextColor3=Color3.new(1,1,1);v72.TextSize=16;Instance.new("UICorner",v72).CornerRadius=UDim.new(0,12);local v82=Instance.new("TextButton");v82.Parent=v22;v82.Position=UDim2.new(0.52,0,0,275);v82.Size=UDim2.new(0.38,0,0,50);v82.BackgroundColor3=Color3.fromRGB(70,90,190);v82.Font=Enum.Font.GothamBold;v82.Text="Discord";v82.TextColor3=Color3.new(1,1,1);v82.TextSize=16;Instance.new("UICorner",v82).CornerRadius=UDim.new(0,12);task.spawn(function() while task.wait(0.2) do local v95=Instance.new("Frame");local v96=math.random(3,7);v95.Size=UDim2.new(0,v96,0,v96);v95.Position=UDim2.new(math.random(),0,1.1,0);v95.BackgroundColor3=Color3.new(1,1,1);v95.BackgroundTransparency=0.5;v95.Parent=v18;Instance.new("UICorner",v95).CornerRadius=UDim.new(1,0);local v103=v1:Create(v95,TweenInfo.new(math.random(5,10)),{Position=UDim2.new(v95.Position.X.Scale,0, -0.1,0),BackgroundTransparency=1});v103:Play();v103.Completed:Connect(function() v95:Destroy();end);end end);local function v92() v7:Destroy();loadstring(game:HttpGet(v5))();end if (isfile and isfile(v6) and (readfile(v6)==v2)) then v92();else v62.MouseButton1Click:Connect(function() if (v52.Text==v2) then v62.Text="ACCESS GRANTED";v62.BackgroundColor3=Color3.fromHex("#004242");if writefile then writefile(v6,v52.Text);end task.wait(1);v92();else v62.Text="INVALID KEY";v62.BackgroundColor3=Color3.fromRGB(150,50,50);task.wait(1);v62.Text="Verify Access Key";v62.BackgroundColor3=Color3.fromRGB(40,45,55);end end);end v72.MouseButton1Click:Connect(function() setclipboard(v4);v72.Text="COPIED!";task.wait(1);v72.Text="Get Key";end);v82.MouseButton1Click:Connect(function() setclipboard(v3);v82.Text="COPIED!";task.wait(1);v82.Text="Discord";end);
+-- [[ 1. CONFIGURATION ]] --
+local CORRECT_KEY = "CUSTOM_SKY"
+local DISCORD_LINK = "https://discord.gg/dH6CtkECt"
+local GET_KEY_LINK = "https://direct-link.net/6045319/0Ca4wAcRwnEo" 
+local TARGET_SCRIPT = "https://pastefy.app/xea1xu5S/raw" 
+local FILE_NAME = "Xen-key.txt"
+
+-- [[ 2. UI INITIALIZATION ]] --
+if CoreGui:FindFirstChild("SATURN_AUTH") then 
+    CoreGui.Xen_AUTH:Destroy() 
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "Xen_AUTH"
+ScreenGui.Parent = CoreGui
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.DisplayOrder = 999999
+
+local BlackBG = Instance.new("Frame")
+BlackBG.Size = UDim2.new(1, 0, 1, 0)
+BlackBG.BackgroundColor3 = Color3.new(0, 0, 0)
+BlackBG.BackgroundTransparency = 0.5 -- Set to 0.5 for semi-transparency
+BlackBG.BorderSizePixel = 0
+BlackBG.Parent = ScreenGui
+
+local ParticleHolder = Instance.new("Frame")
+ParticleHolder.Size = UDim2.new(1, 0, 1, 0)
+ParticleHolder.BackgroundTransparency = 1
+ParticleHolder.Parent = BlackBG
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromHex("#0b0e14")
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.Size = UDim2.new(0, 360, 0, 380)
+Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0, 15)
+local UIStroke = Instance.new("UIStroke", MainFrame)
+UIStroke.Color = Color3.fromHex("#004242")
+UIStroke.Thickness = 2
+
+local Title = Instance.new("TextLabel")
+Title.Parent = MainFrame; Title.Position = UDim2.new(0,0,0,30); Title.Size = UDim2.new(1,0,0,30)
+Title.Font = Enum.Font.GothamBold; Title.Text = "Access Key Required"; Title.TextColor3 = Color3.new(1,1,1); Title.TextSize = 24; Title.BackgroundTransparency = 1
+
+local SubTitle = Instance.new("TextLabel")
+SubTitle.Parent = MainFrame; SubTitle.Position = UDim2.new(0,0,0,65); SubTitle.Size = UDim2.new(1,0,0,20)
+SubTitle.Font = Enum.Font.Gotham; SubTitle.Text = "Enter your access key to continue"; SubTitle.TextColor3 = Color3.fromRGB(160,160,160); SubTitle.TextSize = 15; SubTitle.BackgroundTransparency = 1
+
+local KeyBox = Instance.new("TextBox")
+KeyBox.Parent = MainFrame; KeyBox.Position = UDim2.new(0.1,0,0,120); KeyBox.Size = UDim2.new(0.8,0,0,55)
+KeyBox.BackgroundColor3 = Color3.fromRGB(18,22,30); KeyBox.PlaceholderText = "Enter key here"; KeyBox.Text = ""; KeyBox.TextColor3 = Color3.new(1,1,1); KeyBox.TextSize = 17
+Instance.new("UICorner", KeyBox).CornerRadius = UDim.new(0,12)
+
+local VerifyBtn = Instance.new("TextButton")
+VerifyBtn.Parent = MainFrame; VerifyBtn.Position = UDim2.new(0.1,0,0,200); VerifyBtn.Size = UDim2.new(0.8,0,0,55)
+VerifyBtn.BackgroundColor3 = Color3.fromRGB(40,45,55); VerifyBtn.Font = Enum.Font.GothamBold; VerifyBtn.Text = "Verify Access Key"; VerifyBtn.TextColor3 = Color3.new(1,1,1); VerifyBtn.TextSize = 18
+Instance.new("UICorner", VerifyBtn).CornerRadius = UDim.new(0,12)
+
+local GetKeyBtn = Instance.new("TextButton")
+GetKeyBtn.Parent = MainFrame; GetKeyBtn.Position = UDim2.new(0.1,0,0,275); GetKeyBtn.Size = UDim2.new(0.38,0,0,50)
+GetKeyBtn.BackgroundColor3 = Color3.fromRGB(35,130,90); GetKeyBtn.Font = Enum.Font.GothamBold; GetKeyBtn.Text = "Get Key"; GetKeyBtn.TextColor3 = Color3.new(1,1,1); GetKeyBtn.TextSize = 16
+Instance.new("UICorner", GetKeyBtn).CornerRadius = UDim.new(0,12)
+
+local DiscordBtn = Instance.new("TextButton")
+DiscordBtn.Parent = MainFrame; DiscordBtn.Position = UDim2.new(0.52,0,0,275); DiscordBtn.Size = UDim2.new(0.38,0,0,50)
+DiscordBtn.BackgroundColor3 = Color3.fromRGB(70,90,190); DiscordBtn.Font = Enum.Font.GothamBold; DiscordBtn.Text = "Discord"; DiscordBtn.TextColor3 = Color3.new(1,1,1); DiscordBtn.TextSize = 16
+Instance.new("UICorner", DiscordBtn).CornerRadius = UDim.new(0,12)
+
+-- [[ 3. PARTICLE SYSTEM ]] --
+task.spawn(function()
+    while task.wait(0.2) do
+        local p = Instance.new("Frame")
+        local s = math.random(3, 7)
+        p.Size = UDim2.new(0, s, 0, s); p.Position = UDim2.new(math.random(), 0, 1.1, 0)
+        p.BackgroundColor3 = Color3.new(1, 1, 1); p.BackgroundTransparency = 0.5; p.Parent = ParticleHolder
+        Instance.new("UICorner", p).CornerRadius = UDim.new(1, 0)
+        local t = TweenService:Create(p, TweenInfo.new(math.random(5, 10)), {Position = UDim2.new(p.Position.X.Scale, 0, -0.1, 0), BackgroundTransparency = 1})
+        t:Play(); t.Completed:Connect(function() p:Destroy() end)
+    end
+end)
+
+-- [[ 4. LOGIC EXECUTION ]] --
+local function RunTarget()
+    ScreenGui:Destroy()
+    loadstring(game:HttpGet(TARGET_SCRIPT))()
+end
+
+-- Auto-check file for existing key
+if isfile and isfile(FILE_NAME) and readfile(FILE_NAME) == CORRECT_KEY then
+    RunTarget()
+else
+    VerifyBtn.MouseButton1Click:Connect(function()
+        if KeyBox.Text == CORRECT_KEY then
+            VerifyBtn.Text = "ACCESS GRANTED"; VerifyBtn.BackgroundColor3 = Color3.fromHex("#004242")
+            if writefile then writefile(FILE_NAME, KeyBox.Text) end
+            task.wait(1); RunTarget()
+        else
+            VerifyBtn.Text = "INVALID KEY"; VerifyBtn.BackgroundColor3 = Color3.fromRGB(150, 50, 50)
+            task.wait(1); VerifyBtn.Text = "Verify Access Key"; VerifyBtn.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+        end
+    end)
+end
+
+GetKeyBtn.MouseButton1Click:Connect(function() setclipboard(GET_KEY_LINK); GetKeyBtn.Text = "COPIED!"; task.wait(1); GetKeyBtn.Text = "Get Key" end)
+DiscordBtn.MouseButton1Click:Connect(function() setclipboard(DISCORD_LINK); DiscordBtn.Text = "COPIED!"; task.wait(1); DiscordBtn.Text = "Discord" end)
